@@ -1,0 +1,32 @@
+
+Bom dia, este é a entrega do teste para a Netshoes, aqui vou detalhar um pouco o que fiz além de responder as outras questões dos testes.
+
+
+1-) criei alguns casos de testes que podem ser utilizados para verificar o funcionamento da aplicação, estão dentro da package carlos.campanha.test
+2-) fiz a separação dos pacotes no modelo MVC, utilizando o pattern de DAO.
+3-)Para atender uma exigencia do exercício 2, chamei uma API do exercício 1 por dentro do método AssociarClienteCampanha, para simular a independencia das classes.
+4-)Optei por não criar projetos diferentes para o exercício 1 e exercício 2, apenas para facilitar nos testes, sei que é uma boa prática
+esta separação para não criar dependências entre projetos.
+5-) utilizei o servidor grizzly para testes, está configurado na classe servidor. Nos testes unitparios ele é startado automaticamente.
+6-) Não implementei todos os detalhes de um restfull, mas peocurei deixar claro que entendo os retornos e os verbos existentes.
+
+O exercício 3 está no mesmo pacote com um método main para teste.
+
+Resposta do exercício 4 - DeadLock é quando no banco de dados dois clientes necessitam de recursos de forma cruzada, e um aguarda que o outro
+libere este recurso. Exemplo usuária A vai atualizar a tabela 1 e tabela 2, e o usuário B vai atualizar a tabela 2 depois a tabela 1, se
+ocorrer a seguinte sequencia:
+    1-) usuário A faz lock para atualizar a tabela 1
+    2-) usuário B faz lock para atualizar a tabela 2
+    3-) usuário A aguarda o usuário B liberar a tabela 2 e
+    4-) usuário B aguarda o usuário A liberar a tabela 1.
+ Neste caso esta configurado um deadLock, os bancos de dados modernos tem recurso para detectar este problema e derrubam uma das transações.
+ 
+ Resposta do exercício 5- ParallelStream consegue usar os recursos de multithread do SO, ou seja, ele consegue distribuir entre os
+ processadores da máquina o tratamento das coleções. ou seja, é um ótimo recurso para trabalho em paralelo.
+ 
+ Obrigado,
+ 
+ 
+ Carlos Roberto Vendramini
+ 
+ 
