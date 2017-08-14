@@ -10,17 +10,17 @@ public enum Times {
 	Ponte_Preta(7),
 	Santos(8),
 	São_Paulo(9), 
-	Atlético_MG(10),
+	Atletico_MG(10),
 	Cruzeiro(11), 
 	Bahia(12),
-	Vitória(13), 
-	Atlético_PR(14),
+	Vitoria(13), 
+	Atletico_PR(14),
 	Coritiba(15), 
 	Avaí(16),
 	Chapecoense(17), 
-	Atlético_GO(18), 
+	Atletico_GO(18), 
 	Sport(19), 
-	Grêmio(20); 
+	GrEmio(20); 
 
 	
 	private final int valor;

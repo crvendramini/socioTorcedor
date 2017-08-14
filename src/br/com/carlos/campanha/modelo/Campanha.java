@@ -1,6 +1,9 @@
 package br.com.carlos.campanha.modelo;
 
 import java.util.Calendar;
+import java.util.List;
+
+import com.google.gson.Gson;
 
 public class Campanha {
 	private Long id;
@@ -21,6 +24,12 @@ public class Campanha {
 	
 
 	
+	public Campanha() {
+		
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}
@@ -51,6 +60,15 @@ public class Campanha {
 	public void setDataFim(Calendar dataFim) {
 		this.dataFim = dataFim;
 	}
-	
+
+
+
+	public String toJson() {
+		
+		return new Gson().toJson(this);
+	}
+	public String toJson(List<Campanha> campanha) {
+		return new Gson().toJson(campanha);
+	}
 
 }
